@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="PT-BR" xmlns:th="http//www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuários</title>
+</head>
+
+<body style="background-color: rgba(128,128,128,0.45)">
+    <div >
+        <h1 style="color: rgba(119,0,255,0.93)"> Usuários: </h1>
+    </div>
+    <hr>
+    <table>
+        <thead>
+            <tr style="color: #6e0a62">
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="color: #1c2185;" th:each="user:${users}">
+                <td th:text="${user.name}"> Nome</td>
+                <td th:text="${user.email}"> Email</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
